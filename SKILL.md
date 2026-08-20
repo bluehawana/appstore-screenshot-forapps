@@ -59,6 +59,27 @@ Outputs every accepted size into subdirectories of `outputDir`. Upload the
 2880×1800 set — Apple downscales for smaller displays, and starting from the
 largest gives the sharpest result on Retina.
 
+## Layouts
+
+Choosing the right layout per slide is most of what separates a professional
+listing from a homemade one. Set `"layout"` on each slide:
+
+| Layout | Use it for |
+|---|---|
+| `hero-left` | Text left, app right. The workhorse — best for slide one. |
+| `hero-right` | Mirrored. Alternate with `hero-left` so a set feels composed. |
+| `centered` | Headline centred above the app. When the UI is the argument. |
+| `showcase` | App nearly full-bleed with a caption. For dense interfaces. |
+| `spotlight` | One huge number beside the app. Add `"stat": "140 W"`. |
+
+```bash
+swift makeshots.swift --layouts
+```
+
+Defaults to `hero-left` when omitted. A good four-slide set alternates sides
+rather than repeating one layout — the eye notices the rhythm even when the
+reader does not.
+
 ## Writing the slides
 
 The first slide does almost all the work; many people never scroll past it.
