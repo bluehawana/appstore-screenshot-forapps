@@ -69,6 +69,28 @@ Output lands in `outputDir/2880x1800/` and `outputDir/1280x800/`. Upload the
 2880×1800 set — Apple downscales for smaller displays, so starting from the
 largest gives the sharpest result on Retina.
 
+## Capturing automatically
+
+The tool can grab a running app's window itself:
+
+```bash
+swift makeshots.swift --capture "MyApp" docs/images/main.png
+swift makeshots.swift --windows "MyApp"     # list what it can see
+```
+
+**This needs Screen Recording permission**, and the permission belongs to the
+*terminal* running the script, not to the script. Without it macOS hides every
+window from the capture API, so the tool reports that rather than writing an
+empty desktop image.
+
+Grant it in **System Settings → Privacy & Security → Screen Recording**, add
+your terminal, then restart the terminal.
+
+Manual capture (`⌘⇧4`, then Space) needs no permission and stays the simpler
+path when you only have a few shots — and it is the only way to capture a
+state you have to set up by hand, like a specific reading or an error the app
+only shows under particular conditions.
+
 ## Layouts
 
 Choosing the right layout per slide is most of what separates a professional
