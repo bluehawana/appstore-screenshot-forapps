@@ -1,0 +1,5 @@
+.DS_Store
+out/
+output/
+docs/appstore/
+*.dmg
